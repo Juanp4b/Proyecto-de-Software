@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Mascotas Perdidas</title>
+  <meta name="description" content="Formulario de contacto para iniciar el proceso de adopción de una mascota.">
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header>
+    <nav class="nav-bar" aria-label="Navegación principal">
+      <div class="nav-inner">
+        <span class="nav-logo" aria-hidden="true">🦴</span>
+        <ul class="nav-links">
+          <li><a href="index.html">Mascotas Perdidas</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+          <li><a href="administracion.html">Administración</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido" class="container">
+    <h1 class="titulo-pagina">Contacto</h1>
+    <p class="intro-texto">
+      Completá el siguiente formulario si estás interesado en adoptar alguna de nuestras mascotas.
+      Nos pondremos en contacto a la brevedad.
+    </p>
+
+    <div class="form-wrapper">
+      <!-- Sitio sin backend ni scripts: al enviar, se navega a una página
+           estática de confirmación (gracias.html). La validación de campos
+           obligatorios la realiza el propio navegador (atributo "required"),
+           y el botón "Enviar" se atenúa mediante CSS (:invalid) mientras
+           falte completar alguna pregunta. -->
+      <form id="formulario-contacto" action="gracias.html" method="get" novalidate="false">
+
+        <div class="campo-formulario">
+          <label for="nombre">Nombre y Apellido</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel"
+                 pattern="[0-9+\-\s()]{6,20}" placeholder="Ej: 11-2345-6789" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" autocomplete="email" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" name="direccion" autocomplete="street-address" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="mascota">¿Qué mascota está interesado en adoptar?</label>
+          <select id="mascota" name="mascota" required>
+            <option value="" selected disabled hidden>Seleccioná una mascota</option>
+            <option value="Rocky">Rocky (Perro)</option>
+            <option value="Max">Max (Perro)</option>
+            <option value="Luna">Luna (Gato)</option>
+          </select>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="motivo-interes">¿Por qué está interesado en adoptar?</label>
+          <textarea id="motivo-interes" name="motivo-interes" required></textarea>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="motivo-mejor-opcion">¿Por qué usted es la mejor opción para adoptar?</label>
+          <textarea id="motivo-mejor-opcion" name="motivo-mejor-opcion" required></textarea>
+        </div>
+
+        <div class="form-acciones">
+          <button type="submit" class="btn-pill">Enviar</button>
+          <p class="nota-formulario">
+            El botón se habilita automáticamente cuando completaste todas las preguntas.
+          </p>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Mascotas Perdidas — Sitio de ejemplo académico.</p>
+  </footer>
+
+</body>
+</html>

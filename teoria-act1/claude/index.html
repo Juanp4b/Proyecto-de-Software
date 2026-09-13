@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mascotas Perdidas</title>
+  <meta name="description" content="Listado de mascotas perdidas en busca de su familia. Filtrá por perros o gatos y consultá la ficha completa de cada una.">
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header>
+    <nav class="nav-bar" aria-label="Navegación principal">
+      <div class="nav-inner">
+        <span class="nav-logo" aria-hidden="true">🦴</span>
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Mascotas Perdidas</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="administracion.html">Administración</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido" class="container">
+    <h1 class="titulo-pagina">Mascotas Perdidas</h1>
+    <p class="intro-texto">
+      Estas son las mascotas que están buscando volver a casa. Elegí una categoría
+      y tocá "+ Info" para ver la ficha completa con todos los datos de contacto.
+    </p>
+
+    <!-- Pestañas de categoría implementadas sin JavaScript, mediante inputs
+         tipo radio ocultos visualmente pero accesibles por teclado. -->
+    <div class="tabs-categoria">
+      <input type="radio" name="categoria-mascota" id="tab-perros" class="tab-radio" checked>
+      <label for="tab-perros" class="tab-label">Perros</label>
+
+      <input type="radio" name="categoria-mascota" id="tab-gatos" class="tab-radio">
+      <label for="tab-gatos" class="tab-label">Gatos</label>
+
+      <!-- Categoría: Perros -->
+      <div class="galeria" id="galeria-perros">
+        <article class="mascota-card">
+          <img class="foto-mascota" src="imagenes/perro_1.png" alt="Foto de Rocky" width="200" height="200">
+          <h3>Rocky</h3>
+          <a class="btn-pill btn-info" href="info/perro_1.pdf" target="_blank" rel="noopener noreferrer"
+             aria-label="+ Info sobre Rocky (PDF, se abre en una pestaña nueva)">+ Info</a>
+        </article>
+
+        <article class="mascota-card">
+          <img class="foto-mascota" src="imagenes/perro_2.png" alt="Foto de Max" width="200" height="200">
+          <h3>Max</h3>
+          <a class="btn-pill btn-info" href="info/perro_2.pdf" target="_blank" rel="noopener noreferrer"
+             aria-label="+ Info sobre Max (PDF, se abre en una pestaña nueva)">+ Info</a>
+        </article>
+      </div>
+
+      <!-- Categoría: Gatos -->
+      <div class="galeria" id="galeria-gatos">
+        <article class="mascota-card">
+          <img class="foto-mascota" src="imagenes/gato_1.png" alt="Foto de Luna" width="200" height="200">
+          <h3>Luna</h3>
+          <a class="btn-pill btn-info" href="info/gato_1.pdf" target="_blank" rel="noopener noreferrer"
+             aria-label="+ Info sobre Luna (PDF, se abre en una pestaña nueva)">+ Info</a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Mascotas Perdidas — Sitio de ejemplo académico.</p>
+  </footer>
+
+</body>
+</html>

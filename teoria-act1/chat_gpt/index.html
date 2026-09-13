@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Listado de mascotas perdidas, con información para facilitar su identificación y recuperación.">
+  <title>Mascotas Perdidas</title>
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="logo" href="index.html" aria-label="Inicio - Mascotas Perdidas">🦴</a>
+      <a class="nav-link active" href="index.html" aria-current="page">Mascotas Perdidas</a>
+      <a class="nav-link" href="contacto.html">Contacto</a>
+      <a class="nav-link" href="administracion.html">Administración</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <h1 class="page-title">Mascotas Perdidas</h1>
+    <p class="page-intro">Consultá las mascotas publicadas y abrí la ficha de cada una para conocer sus datos.</p>
+
+    <!--
+      Sitio completamente estático: HTML/CSS no puede leer el contenido de las carpetas
+      "imagenes" e "info" ni construir tarjetas automáticamente. Cada tarjeta se agrega
+      manualmente cuando existe una pareja coincidente {categoria}_{id}.ext en ambas carpetas.
+      Ejemplo: imagenes/perro_1.jpg + info/perro_1.pdf.
+    -->
+    <input class="tab-input" type="radio" name="categoria" id="tab-perros" checked>
+    <input class="tab-input" type="radio" name="categoria" id="tab-gatos">
+
+    <div class="category-tabs" role="tablist" aria-label="Categoría de mascotas">
+      <label class="tab-label" for="tab-perros" role="tab">Perros</label>
+      <label class="tab-label" for="tab-gatos" role="tab">Gatos</label>
+    </div>
+
+    <section class="pet-gallery" aria-label="Galería de mascotas">
+      <div class="pet-category dogs" role="tabpanel" aria-label="Perros">
+        <article class="pet-card">
+          <img class="pet-photo" src="imagenes/perro_1.jpg" alt="Foto de Bruno" width="200" height="200">
+          <h2 class="pet-name">Bruno</h2>
+          <a class="info-button" href="info/perro_1.pdf" target="_blank" rel="noopener">+ Info</a>
+        </article>
+      </div>
+
+      <div class="pet-category cats" role="tabpanel" aria-label="Gatos">
+        <article class="pet-card">
+          <img class="pet-photo" src="imagenes/gato_1.jpg" alt="Foto de Luna" width="200" height="200">
+          <h2 class="pet-name">Luna</h2>
+          <a class="info-button" href="info/gato_1.pdf" target="_blank" rel="noopener">+ Info</a>
+        </article>
+
+        <article class="pet-card">
+          <img class="pet-photo" src="imagenes/gato_2.jpg" alt="Foto de Milo" width="200" height="200">
+          <h2 class="pet-name">Milo</h2>
+          <a class="info-button" href="info/gato_2.pdf" target="_blank" rel="noopener">+ Info</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Sitio estático de ejemplo para publicación de mascotas perdidas.</small>
+  </footer>
+</body>
+</html>

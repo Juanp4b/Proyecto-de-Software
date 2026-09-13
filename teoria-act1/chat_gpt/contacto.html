@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Formulario de contacto para consultar por una mascota en adopción.">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="logo" href="index.html" aria-label="Inicio - Mascotas Perdidas">🦴</a>
+      <a class="nav-link" href="index.html">Mascotas Perdidas</a>
+      <a class="nav-link active" href="contacto.html" aria-current="page">Contacto</a>
+      <a class="nav-link" href="administracion.html">Administración</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <h1 class="page-title">Contacto</h1>
+
+    <form class="form-card" action="exito.html" method="get">
+      <p class="required-note"><strong>Todos los campos son obligatorios.</strong> El navegador impedirá el envío si falta alguno.</p>
+
+      <div class="form-group">
+        <label class="form-label" for="nombre">Nombre y Apellido</label>
+        <input class="form-control" type="text" id="nombre" name="nombre" autocomplete="name" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="telefono">Teléfono</label>
+        <input class="form-control" type="tel" id="telefono" name="telefono" autocomplete="tel" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="correo">Correo electrónico</label>
+        <input class="form-control" type="email" id="correo" name="correo" autocomplete="email" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="direccion">Dirección</label>
+        <input class="form-control" type="text" id="direccion" name="direccion" autocomplete="street-address" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="mascota">¿Qué mascota está interesado en adoptar?</label>
+        <select class="form-control" id="mascota" name="mascota" required>
+          <option value="" selected disabled>Seleccione una mascota</option>
+          <option value="bruno">Bruno</option>
+          <option value="luna">Luna</option>
+          <option value="milo">Milo</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="motivo">¿Por qué está interesado en adoptar?</label>
+        <textarea class="form-control" id="motivo" name="motivo" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="opcion">¿Por qué usted es la mejor opción para adoptar?</label>
+        <textarea class="form-control" id="opcion" name="opcion" required></textarea>
+      </div>
+
+      <div class="submit-area">
+        <button class="submit-button" type="submit">Enviar</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <small>Formulario accesible mediante teclado y compatible con validación HTML5.</small>
+  </footer>
+</body>
+</html>
