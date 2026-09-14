@@ -23,12 +23,6 @@
     <h1 class="page-title">Mascotas Perdidas</h1>
     <p class="page-intro">Consultá las mascotas publicadas y abrí la ficha de cada una para conocer sus datos.</p>
 
-    <!--
-      Sitio completamente estático: HTML/CSS no puede leer el contenido de las carpetas
-      "imagenes" e "info" ni construir tarjetas automáticamente. Cada tarjeta se agrega
-      manualmente cuando existe una pareja coincidente {categoria}_{id}.ext en ambas carpetas.
-      Ejemplo: imagenes/perro_1.jpg + info/perro_1.pdf.
-    -->
     <input class="tab-input" type="radio" name="categoria" id="tab-perros" checked>
     <input class="tab-input" type="radio" name="categoria" id="tab-gatos">
 
@@ -40,24 +34,26 @@
     <section class="pet-gallery" aria-label="Galería de mascotas">
       <div class="pet-category dogs" role="tabpanel" aria-label="Perros">
         <article class="pet-card">
-          <img class="pet-photo" src="imagenes/perro_1.jpg" alt="Foto de Bruno" width="200" height="200">
-          <h2 class="pet-name">Bruno</h2>
+          <img class="pet-photo" src="imagenes/perro_1.jpg" alt="Foto de Toby" width="200" height="200">
+          <h2 class="pet-name">Toby</h2>
           <a class="info-button" href="info/perro_1.pdf" target="_blank" rel="noopener">+ Info</a>
+        </article>
+
+        <article class="pet-card">
+          <img class="pet-photo" src="imagenes/perro_2.jpg" alt="Foto de Luna" width="200" height="200">
+          <h2 class="pet-name">Luna</h2>
+          <a class="info-button" href="info/perro_2.pdf" target="_blank" rel="noopener">+ Info</a>
+        </article>
+  
+        <article class="pet-card">
+          <img class="pet-photo" src="imagenes/perro_3.jpg" alt="Foto de Max" width="200" height="200">
+          <h2 class="pet-name">Max</h2>
+          <a class="info-button" href="info/perro_3.pdf" target="_blank" rel="noopener">+ Info</a>
         </article>
       </div>
 
       <div class="pet-category cats" role="tabpanel" aria-label="Gatos">
-        <article class="pet-card">
-          <img class="pet-photo" src="imagenes/gato_1.jpg" alt="Foto de Luna" width="200" height="200">
-          <h2 class="pet-name">Luna</h2>
-          <a class="info-button" href="info/gato_1.pdf" target="_blank" rel="noopener">+ Info</a>
-        </article>
 
-        <article class="pet-card">
-          <img class="pet-photo" src="imagenes/gato_2.jpg" alt="Foto de Milo" width="200" height="200">
-          <h2 class="pet-name">Milo</h2>
-          <a class="info-button" href="info/gato_2.pdf" target="_blank" rel="noopener">+ Info</a>
-        </article>
       </div>
     </section>
   </main>
