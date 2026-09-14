@@ -15,4 +15,4 @@ Elementos que deben estar:
 
 - Generá 3 imagenes de mascotas (perros y/o gatos) junto con sus pdf correspondientes. Inventá la información de adentro para un caso de mascota perdida en general (se usa de ejemplo).
 
-- Todo el sitio debe ser accesible por teclado (tabulador) y poder ser leído por lectores externos (añadir texto alternativo a las imágenes de los ítems, que lean el "Foto de {nombre}").
+- Todo el sitio debe ser accesible por teclado (tabulador) y poder ser leído por lectores externos (añadir texto alternativo a las imágenes de los ítems que describan físicamente a la mascota perdida).
